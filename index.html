@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brel_G6_Hard</title>
+    <link rel="stylesheet" href="mycss.css">
+    <script src="./myscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body style="background-image: url('./background_img.webp');">
+    <center>
+        <button class="fill" onclick="guide()"> guide </button>
+        <button class="fill2" onclick="setStart()"> Hard </button>
+        <!-- <button class="btn" onclick="undo()()"> undo </button> -->
+        <button class="fill3" onclick="undo()"> undo </button>
+        <button class="fill4" onclick="reset()"> reset </button>
+        <button class="fill5" style="background-color: red;" onclick="passShandiF()" id="shandiBtn"> Pass Shandi </button>
+        <button class="fill6" onclick="Manual()"> manual </button>
+        <button class="fill7 calmanual" style="display: none;" onclick="cal3M()"> cal 3 Meteor </button>
+        <button class="fill8 calmanual" style="display: none;" onclick="cal4M()"> cal 4 Meteor </button>
+        <h1 style="color: white;" id="orderB">Mode </h1>
+    </center>
+    <div class="card">
+        <div class="container">
+            <h4><b>Guide</b></h4>
+            <p><text style="color: red; font-weight: bold;">Left Click</text> For place<text
+                    style="color: rgb(0, 60, 255); font-weight: bold;"> blue</text> Meteor</p>
+            <p><text style="color: red; font-weight: bold;">Right Click</text> For place <text
+                    style="background-color: black; color: rgb(255, 251, 0); font-weight: bold;"> yellow </text> Meteor
+            </p>
+            <p><text style="color: red; font-weight: bold;">Middle Click</text> For place<text
+                    style="color: rgb(0, 60, 255); font-weight: bold;"> blue</text> Meteor <text
+                    style="color: red;">but</text> Not in Mechanic</p>
+        </div>
+    </div>
+    <div class="card" style="margin-top: 20px;">
+        <div class="container">
+            <h4><b>Note </b></h4>
+            <p> If you pass a Shandi Please Click Button "Pass Shandi" it will calculate where tile can Nuke</p>
+        </div>
+    </div>
+    <div class="center rotate disableselect">
+        <table id="table">
+            <tr>
+                <td id="12" onclick="meteor(this)">
+                    <div class="box state1">
+                        <div class="notRotate">12</div>
+                        <div class="notRotate showtime" id="time12"></div>
+                        <div class="notRotate showhealt" id="healt12">3</div>
+                    </div>
+                </td>
+                <td id="1" onclick="meteor(this)">
+                    <div class="box state2">
+                        <div class="notRotate">1</div>
+                        <div class="notRotate showtime" id="time1"></div>
+                        <div class="notRotate showhealt" id="healt1">3</div>
+                    </div>
+                </td>
+                <td id="3" onclick="meteor(this)">
+                    <div class="box">
+                        <div class="notRotate">3</div>
+                        <div class="notRotate showtime" id="time3"></div>
+                        <div class="notRotate showhealt" id="healt3">3</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td id="11" onclick="meteor(this)">
+                    <div class="box">
+                        <div class="notRotate">11</div>
+                        <div class="notRotate showtime" id="time11"></div>
+                        <div class="notRotate showhealt" id="healt11">3</div>
+                    </div>
+                </td>
+                <td id="0" onclick="meteor(this)">
+                    <div class="box state3">
+                        <div class="notRotate">0</div>
+                        <div class="notRotate showtime" id="time0"></div>
+                        <div class="notRotate showhealt" id="healt0">14</div>
+                    </div>
+                </td>
+                <td id="5" onclick="meteor(this)">
+                    <div class="box">
+                        <div class="notRotate">5</div>
+                        <div class="notRotate showtime" id="time5"></div>
+                        <div class="notRotate showhealt" id="healt5">3</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td id="9" onclick="meteor(this)">
+                    <div class="box">
+                        <div class="notRotate">9</div>
+                        <div class="notRotate showtime" id="time9"></div>
+                        <div class="notRotate showhealt" id="healt9">3</div>
+                    </div>
+                </td>
+                <td id="7" onclick="meteor(this)">
+                    <div class="box">
+                        <div class="notRotate">7</div>
+                        <div class="notRotate showtime" id="time7"></div>
+                        <div class="notRotate showhealt" id="healt7">3</div>
+                    </div>
+                </td>
+                <td id="6" onclick="meteor(this)">
+                    <div class="box">
+                        <div class="notRotate">6</div>
+                        <div class="notRotate showtime" id="time6"></div>
+                        <div class="notRotate showhealt" id="healt6">3</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
